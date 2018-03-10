@@ -14,3 +14,7 @@ Samlock is a smart doors' lock management cloud platform.
 6. ./sam
 7. 访问本地IP: 127.0.0.1:8888(或者自定义端口)
 ```
+
+# display
+
+![home](https://github.com/Guguant/SmartLockManagement/blob/master/doc/home.png)
