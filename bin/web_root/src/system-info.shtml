@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/system.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+</head>
+
+<body style="background:#333333">
+    <!-- 头部导航栏 -->
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light  fixed-top" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">
+                <img src="../img/home-page/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="font-weight-bold">智能门锁监视系统</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto font-weight-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="status.shtml">实时状态</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.shtml">分析</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="configure.shtml">配置</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">系统<span class="sr-only">(current)</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- [系统]页面中部 -->
+    <div class="system-middle">
+        <div class="container-fluid" style="margin-bottom: 50px;">
+            <div class="row">
+                <!-- _blank 预留区域 -->
+                <div class="col-md-2"></div>
+                <!-- 功能导航栏 
+                    包含:
+                        1. 日志
+                        1. 版本信息
+                        4. 帮助文档
+                -->
+                <div class="col-md-2">
+                    <div class="btn-group-vertical">
+                        <a href="system.shtml" class="btn btn-primary btn-lg" role="button">日志</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button">版本</a>
+                        <a href="system-help.shtml" class="btn btn-primary btn-lg" role="button">帮助</a>
+                    </div>
+                </div>
+
+                <!-- 展示系统版本 -->
+                <div class="col-md-6 system-output-info">
+                    <div>
+                        <h1 class="font-weight-bold">新功能
+                            <span>
+                                <a href="system-history.shtml" class="text-primary" style="font-size:15px;">
+                                    版本历史记录
+                                </a>
+                            </span>
+                        </h1>
+                        <ul>
+                            <li>版本<span>2018/1/6<span></li>
+                            <li>本次更新<br>
+                                <ul>
+                                    <li>1. 优化界面</li>
+                                    <li>2. 修改BUG</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="font-weight-bold">信息</h1>
+                        <ul>
+                            <li>开发商<span>Anaian.com Co.,Ltd<span></li>
+                            <li>大小<span>1.3M</span></li>
+                            <li>兼容性<span>Chrome</span></li>
+                            <li>语言<span>简体中文</span></li>
+                            <li>开发者网站<span>www.sam.anaian.com</span></li>
+                            <li>隐私政策<span>terms</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- _blank 预留区域 -->
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <!-- 页脚, 开发者信息 -->
+    <footer>
+    </footer>
+    <script src="../js/plugins/jquery-3.1.1.min.js "></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js "></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js "></script>
+</body>
+
+</html>

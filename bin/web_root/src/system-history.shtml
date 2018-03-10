@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/system.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+</head>
+
+<body style="background:#333333">
+    <!-- 头部导航栏 -->
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">
+                <img src="../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="font-weight-bold">智能门锁监视系统</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- [系统]页面中部 -->
+    <div>
+        <div class="container-fluid" style="margin-top:70px;margin-bottom: 50px;">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <a href="system-info.shtml" class="text-primary">
+                        <i class="fa fa-chevron-left"></i> 返回
+                    </a>
+                    <br>
+                    <br>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h2 class="">版本历史记录</h2>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="font-weight-bold">2017.11.03</span>
+                            <br> 新功能
+                            <br> - 查询传感器状态
+                        </li>
+                        <li class="list-group-item">
+                            <span class="font-weight-bold">2017.10.28</span>
+                            <br> 新功能
+                            <br> - 优化web界面
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚, 开发者信息 -->
+    <footer>
+    </footer>
+    <script src="../js/plugins/jquery-3.1.1.min.js "></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js "></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js "></script>
+</body>
+
+</html>

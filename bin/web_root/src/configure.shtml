@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/configure.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body style="background:#333333">
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light  fixed-top" style="background-color: #e3f2fd;">
+
+            <a class="navbar-brand" href="#">
+                <img src="../img/home-page/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="font-weight-bold">智能门锁监视系统</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto font-weight-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="status.shtml">实时状态</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.shtml">分析</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">配置<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="system.shtml">系统</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="configure-middle container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div style="margin-bottom: 10px;">
+                    <a id="ismonitoring" class="btn btn-primary" href="#" role="button">已监控设备</a>
+                    <a class="btn btn-primary" href="configure-add.shtml" role="button">增加设备</a>
+                </div>
+
+                <!-- 已经监控的智能锁设备信息列表 -->
+                <div>
+                    <table class="table table-sm table-light table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="row">#</th>
+                                <th>教室编号</th>
+                                <th>位置</th>
+                                <th>IP</th>
+                                <th>端口号</th>
+                                <th>关注</th>
+                            </tr>
+                        </thead>
+                        <tbody id="MonitorList">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 预留区域 -->
+            <div class="col-md-3 "></div>
+        </div>
+    </div>
+
+    <!-- 页脚, 开发者信息 -->
+    <footer>
+        <!-- 缺省 -->
+    </footer>
+
+    <script src="../js/plugins/jquery-3.1.1.min.js "></script>
+    <script src="../js/configure.js "></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js "></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js "></script>
+</body>
+
+</html>w

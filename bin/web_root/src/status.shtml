@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doors</title>
+
+    <!-- mobile client -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/status.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body style="background: #333333">
+    <!--  头部导航栏 -->
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light  fixed-top" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">
+                <img src="../img/home-page/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="font-weight-bold">智能门锁监视系统</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto font-weight-bold">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">实时状态<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.shtml">分析</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="configure.shtml">配置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="system.shtml">系统</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面中间部分 -->
+    <div class="status-middle">
+        <div class="container-fluid" style="margin-bottom: 100px;">
+            <br>
+            <div class="row">
+                <div class="col-md-1"></div>
+
+                <!-- 用户关注列表 -->
+                <div class="col-md-5">
+                    <button class="btn btn-light font-weight-bold" style="margin-top:4px;"><i class="fa fa-heart" aria-hidden="true"></i> 特别关注</button>
+                    <br><br>
+                    <div style="font-size:24px;">
+                        <div>
+                            <label class="text-white">开启</label> <span id="on-facus"></span>
+                        </div>
+                        <div>
+                            <label class="text-white">关闭</label> <span id="off-facus"></span>
+                        </div>
+                        <div>
+                            <label class="text-white">异常</label> <span id="wrong-facus"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                    所有传感器设备实时信息面板 
+                -->
+                <div class="col-md-5">
+                    <div>
+                        <div style="float:left">
+                            <h3 class=" display-5 font-weight-bold text-white">实时状态</h3>
+                        </div>
+                        <div class="btn-group btn-group-sm" style="float:right">
+                            <button type="button" class="btn btn-light">
+                            sum <span class="badge badge-primary" id="sum"></span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                            on  <span class="badge badge-success" id="on"></span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                            off <span class="badge badge-dark" id="off"></span>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                            wrong <span class="badge badge-danger" id="wrong"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- 传感器实时状态表格 -->
+                    <table class="table table-sm table-hover table-striped">
+                        <thead style="color:white">
+                            <tr>
+                                <th scope="row">#</th>
+                                <th>位置</th>
+                                <th>开/关</th>
+                                <th>IP</th>
+                            </tr>
+                        </thead>
+                        <tbody id="on-status"></tbody>
+                        <tbody id="off-status"></tbody>
+                        <tbody id="wrong-status"></tbody>
+                    </table>
+                </div>
+                <!-- 预留区域 -->
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚, 开发者信息 -->
+    <footer>
+        <!-- 缺省 -->
+    </footer>
+    <script src="../js/plugins/jquery-3.1.1.min.js "></script>
+    <script src="../js/status.js "></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</body>
+
+</html>

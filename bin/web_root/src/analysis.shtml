@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doors</title>
+
+    <!-- mobile client -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/analysis.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body style="background: #333333">
+    <!--  头部导航栏 -->
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light  fixed-top" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">
+                <img src="../img/home-page/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="font-weight-bold">智能门锁监视系统</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto font-weight-bold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="status.shtml">实时状态</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">分析<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="configure.shtml">配置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="system.shtml">系统</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面中间部分 -->
+    <div class="analysis-middle">
+        <div class="container" style="margin-bottom: 100px;">
+            <div class="row" style="margin-top:30px;">
+                <!-- 分析数据 展示区域-->
+                <div class="col-md-8">
+                    <!-- 输出分析结果
+                        开始-->
+                    <div class="card bg-light text-dark" style="margin-bottom:50px; " id="analysis-result ">
+                        <div class="card-header ">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            <span class="font-weight-bold " id="title"></span><br>
+                            <small id="time"></small>
+                        </div>
+                        <div class="card-body ">
+                            <!-- 状态为on的设备
+                                即，锁是开着的
+                            -->
+                            <span class="font-weight-bold ">on</span>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="font-weight-bold" id="device-on"></span>
+                                </li>
+                            </ul>
+                            <br>
+                            <!-- 状态为off的设备
+                                即，锁是关着的
+                            -->
+                            <span class="font-weight-bold ">off</span>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="font-weight-bold" id="device-off"></span>
+                                </li>
+                            </ul>
+                            <br>
+                            <!-- 状态为wrong的设备
+                                即，锁可能断线了，或者程序异常等
+                            -->
+                            <i class="text-danger fa fa-exclamation-triangle "></i>
+                            <span class="font-weight-bold ">wrong</span>
+                            <ul class="list-group">
+                                <li class="list-group-item ">
+                                    <span class="font-weight-bold" id="device-wrong"></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-footer text-center ">
+                            <span class="mx-auto ">由Ananai提供计算服务</span>
+                        </div>
+                    </div>
+                    <!-- 结束 
+                        输出分析结果-->
+                </div>
+
+                <!-- 图表分析界面-->
+                <div class="col-md-4" style="color:white;">
+                    <div style="padding-bottom:5px;margin-bottom:5px;
+                        border-bottom:1px solid #888888">
+                        <i class="fa fa-bookmark-o"></i><span class="font-weight-bold"> 刷新页面，更新数据</span>
+                        <br><span>总计 </span><span id="allsum"></span>
+                        <span>开 </span><span id="onsum"></span>
+                        <span>关 </span><span id="offsum"></span>
+                        <span>异常 </span><span id="wrongsum"></span>
+                    </div>
+                    <!-- 饼状图展示设备开关状态的百分比 -->
+                    <div id="pieShow" style="margin:auto 0;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- 缺省 -->
+    </footer>
+
+    <script src="../js/plugins/jquery-3.1.1.min.js "></script>
+    <script src="../js/analysis.js "></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js "></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js "></script>
+</body>
+
+</html>

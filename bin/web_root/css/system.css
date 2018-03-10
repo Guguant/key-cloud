@@ -1,0 +1,24 @@
+/******* system页面中部样式 **************/
+
+.system-middle {
+    display: inline-block;
+    width: 100%;
+    margin-top: 73px;
+}
+
+
+/* 输出信息表样式 */
+
+.system-middle-rightside-output {
+    /*margin-bottom:50px;*/
+    color: white;
+    border: 1px dashed #99CCCC;
+}
+
+.system-output-info {
+    color: white;
+}
+
+.system-output-info span {
+    float: right;
+}

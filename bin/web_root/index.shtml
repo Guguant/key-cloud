@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doors</title>
+
+    <!-- mobile client -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body style="background: #333333;">
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-expand-md navbar-light  fixed-top" style="background-color: #e3f2fd;">
+            <div>
+                <a class="navbar-brand" href="#">
+                    <img src="../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                    <span class="font-weight-bold">智能门锁监视系统</span>
+                </a>
+                <small>安云，守护每一个家庭</small>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="index-middle">
+        <div class="container-fluid" style="margin-bottom: 50px;margin-top:100px;">
+
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+
+                <!-- 用户登录表单 -->
+                <div class="col-md-4" style="background:white;">
+                    <br>
+                    <form id="loginform">
+                        <!-- username -->
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label font-weight-bold" for="username">用户名</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" name="username" placeholder="Enter username">
+                            </div>
+                        </div>
+                        <!-- password -->
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label font-weight-bold" for="passwd">密码</label>
+                            <div class="col-sm-7">
+                                <input type="password" class="form-control" name="passwd" placeholder="Enter password">
+                            </div>
+                        </div>
+                        <!-- remember password -->
+                        <div class="form-check">
+                            <label class="form-check-label" style="color:black;">
+                                <input class="form-check-input" type="checkbox"> 记住密码
+                            </label>
+                        </div>
+                        <hr>
+                        <!-- submit -->
+                        <div>
+                            <button type="submit" class="btn">登入</button>
+                            <a class="font-weight-bold" style="float:right;border-bottom:2px dashed #0066FF" data-toggle="modal" data-target="#myModal">
+                                《用户协议》
+                            </a>
+                        </div>
+                    </form>
+                    <hr>
+                    <!-- 登录反馈，告知用户登录失败，亦或登录成功 -->
+                    <div id="out"></div>
+                </div>
+                <!--  预留区域 -->
+                <div class="col-md-4"></div>
+
+                <!-- 模态框, 协议信息 -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- 模态框头部 -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">用户须知</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- 模态框主体 -->
+                            <div class="modal-body">
+                                <h3>默认帐号</h3>
+                                <ul>
+                                    <li>username: admin</li>
+                                    <li>password: admin</li>
+                                </ul>
+                            </div>
+                            <!-- 模态框底部 -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚, 开发者信息 -->
+    <footer>
+        <nav class="navbar fixed-bottom navbar-light bg-faded" style="background-color: #e3f2fd; ">
+            <span class="mx-auto small">Copyright &copy; 2017 Anaian Inc. 安云智行</span>
+        </nav>
+    </footer>
+
+    <script type="text/javascript " src="js/plugins/jquery-3.1.1.min.js "></script>
+    <script type="text/javascript " src="js/login.js "></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js "></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js "></script>
+</body>
+
+</html>
