@@ -1,7 +1,5 @@
-# samlock
-Samlock is a smart doors' lock management cloud platform.
-
-
+# SmartLockManagement
+SmartLockManagement is a smart doors' lock management cloud platform.
 
 # build
 
