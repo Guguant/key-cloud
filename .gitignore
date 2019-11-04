@@ -1,4 +1,3 @@
-lib/
 build/
 bin/sam
 bin/*test
