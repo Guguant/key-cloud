@@ -10,7 +10,7 @@ SmartLockManagement is a smart doors' lock management cloud platform.
 
 ## Build
 
-Build with CMake.
+Build with **CMake**.
 
 1. mkdir build
 2. cd build
@@ -22,7 +22,7 @@ Build with CMake.
 
 ## Display
 
-![home-page](https://github.com/Guguant/SmartLockManagement/blob/master/doc/home.png)
+![home-page](doc/home.png)
 
 ## Third Party Library
 
