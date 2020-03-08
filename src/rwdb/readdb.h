@@ -1,10 +1,7 @@
 /*
- * Copyright (c) 2017 An.AI Inc.
- *  
- *
- * License boilerplate.
- *
- * Sun Yiming. Email: hi@anai.co
+ * Copyright (c) 2017 - 2020.
+ * License boilerplate. GNU General Public License v3.0
+ * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
 
 #ifndef SAMLOCK_RWDB_READDB_H_

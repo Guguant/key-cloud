@@ -1,10 +1,7 @@
 /*
- * Copyright (c) 2017 An.AI Inc.
- *  
- *
- * License boilerplate.
- *
- * Sun Yiming. Email: hi@anai.co
+ * Copyright (c) 2017 - 2020.
+ * GNU General Public License v3.0
+ * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
 
 #ifndef SAMLOCK_SENSOR_LOCKSTATUS_H_

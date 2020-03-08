@@ -1,7 +1,7 @@
 #!/bin/bash
 # ========================================
 # Author: Andy
-# e-mail: guguant@yahoo.com
+# e-mail: zscandyz[at]gmail[dot]com
 # Date  : 2017-11-06
 # Script:
 #   This script inserts test datas into tables, 
