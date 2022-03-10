@@ -1,8 +1,8 @@
-# Smart Lock Management
+# Guard Cloud
 
-**Smart Lock Management** is a smart doors' lock management cloud platform.
+**Guard Cloud** is a smart doors' lock management cloud platform.
 
-* [Download SmartLockManagement source code here](https://github.com/Guguant/smart-lock-management)
+* [Download Guard Cloud source code here](https://github.com/Guguant/guard-cloud)
 
 ## Feature
 
