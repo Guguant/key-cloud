@@ -18,7 +18,7 @@ Build with **CMake**.
 4. make
 5. cd ../bin/
 6. ./sam
-7. visit local IP: **127.0.0.1:8888** (or other ports defined by variable***s_http_port*** in server.cc file)
+7. visit local IP: **127.0.0.1:8888** (or other ports defined by variable **s_http_port** in **server.cc** file)
 
 ## Display
 
