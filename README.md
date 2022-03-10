@@ -1,8 +1,8 @@
-# SmartLockManagement
+# Smart Lock Management
 
-SmartLockManagement is a smart doors' lock management cloud platform.
+**Smart Lock Management** is a smart doors' lock management cloud platform.
 
-* [Download SmartLockManagement source code here](https://github.com/Guguant/SmartLockManagement)
+* [Download SmartLockManagement source code here](https://github.com/Guguant/smart-lock-management)
 
 ## Feature
 
