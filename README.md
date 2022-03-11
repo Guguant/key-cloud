@@ -1,8 +1,8 @@
-# Guard Cloud
+# Key Cloud
 
-**Guard Cloud** is a smart doors' lock management cloud platform.
+**Key Cloud** is a smart doors' lock management cloud platform.
 
-* [Download Guard Cloud source code here](https://github.com/Guguant/guard-cloud)
+* [Download Key Cloud source code here](https://github.com/Guguant/key-cloud)
 
 ## Feature
 
