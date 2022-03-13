@@ -2,7 +2,7 @@
 
 **Key Cloud** is a smart doors' lock management cloud platform.
 
-* [Download Key Cloud source code here](https://github.com/Guguant/key-cloud)
+* [Download Key Cloud source code here](https://github.com/estrm/key-cloud)
 
 ## Feature
 
@@ -31,4 +31,4 @@ Build with **CMake**.
 
 ## Contributors
 
-* [guguant](https://github.com/Guguant)
+* [guguant](https://github.com/estrm)
