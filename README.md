@@ -31,4 +31,4 @@ Build with **CMake**.
 
 ## Contributors
 
-* [guguant](https://github.com/estrm)
+* [estrm](https://github.com/estrm)
