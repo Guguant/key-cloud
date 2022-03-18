@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
@@ -8,7 +8,6 @@
 #include <mongoose/mongoose.h>
 #include "timer/timerclock.h"
 
-// 数据读写类
 #include "rwdb/readdb.h"
 #include "rwdb/writedb.h"
 
@@ -77,7 +76,7 @@ static void handle_ssi_call(struct mg_connection *nc, const char *param)
 //      }
 static void handle_real_status(struct mg_connection *nc)
 {
-    // read data from samlock.db database.
+    // read data from kno.db database.
     Json::Value sensor_status_list;
     rwdb::ReadDB read_status;
     read_status.ReadRealStatusInfo(sensor_status_list);
@@ -85,7 +84,7 @@ static void handle_real_status(struct mg_connection *nc)
     JsonToString(sensor_status_list, trans);
 
     // get current time
-    samtimer::Timer *TimeCatch = new samtimer::Timer;
+    knotimer::Timer *TimeCatch = new knotimer::Timer;
     TimeCatch->set_current_time();
     string current_time = "";
     TimeCatch->GetStringTime(current_time);
@@ -116,7 +115,7 @@ static void handle_generate_analysis_table(struct mg_connection *nc)
     read_device.ReadRealStatusInfo(device_status_list);
 
     // get current time
-    samtimer::Timer *TimeCatch = new samtimer::Timer;
+    knotimer::Timer *TimeCatch = new knotimer::Timer;
     TimeCatch->set_current_time();
     string current_time = "";
     TimeCatch->GetStringTime(current_time);
@@ -124,7 +123,7 @@ static void handle_generate_analysis_table(struct mg_connection *nc)
 
     // 【表格 title + time + data】
     Json::Value data_table;
-    data_table["title"] = "杭州电子科技大学 6 教";
+    data_table["title"] = "HDU 6th Teaching Building";
     data_table["time"] = current_time;
     data_table["data"].append(device_status_list);
 
@@ -217,9 +216,9 @@ static void handle_add_device(struct mg_connection *nc, struct http_message *hm)
 
         // WRITE LOG : new add a device.
         Log log = {"", ""};
-        
+
         // get current time
-        samtimer::Timer *  TimeCatch = new samtimer::Timer;
+        knotimer::Timer *  TimeCatch = new knotimer::Timer;
         TimeCatch->set_current_time();
         string current_time = "";
         TimeCatch->GetStringTime(current_time);
@@ -227,7 +226,7 @@ static void handle_add_device(struct mg_connection *nc, struct http_message *hm)
 
         sprintf(log.logTime, "%s", current_time.c_str());
         sprintf(log.logInfo, "added a new device, roomid-%s ip-%s", newdevice.roomId, newdevice.ip);
-        issuccess = write_data.WriteLogToDB(log);        
+        issuccess = write_data.WriteLogToDB(log);
     }
 
     Json::Value reback;
@@ -250,7 +249,7 @@ static void handle_add_device(struct mg_connection *nc, struct http_message *hm)
 //      }
 static void handle_display_log(struct mg_connection *nc)
 {
-    // read data from samlock.db database.
+    // read data from kno.db database.
     Json::Value log_lists;
     rwdb::ReadDB readlog;
     readlog.ReadLog(log_lists);
@@ -258,7 +257,7 @@ static void handle_display_log(struct mg_connection *nc)
     JsonToString(log_lists, trans);
 
     // get current time
-    samtimer::Timer *TimeCatch = new samtimer::Timer;
+    knotimer::Timer *TimeCatch = new knotimer::Timer;
     TimeCatch->set_current_time();
     string current_time = "";
     TimeCatch->GetStringTime(current_time);
@@ -293,7 +292,7 @@ static void ev_handler(struct mg_connection *nc, int ev, void *ev_data)
         {
             handle_login(nc, hm);
         }
-        
+
         /////////////////////////////////////////
         ///> 【2】 status.shtml
         /// This is the status Page used to show sensers' real status data.
@@ -315,7 +314,7 @@ static void ev_handler(struct mg_connection *nc, int ev, void *ev_data)
         /// To get the list of device monitored.
         else if (mg_vcmp(&hm->uri, "/api/monitorlist.json") == 0)
         {
-            
+
             handle_real_status(nc);
         }
 
@@ -380,7 +379,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    printf("Starting web server on port %s\n", s_http_port);
+    printf("Kno is running at http://localhost:%s . Press Ctrl+C to stop.\n", s_http_port);
     for (;;)
     {
         mg_mgr_poll(&mgr, 1000);

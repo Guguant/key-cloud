@@ -1,81 +1,71 @@
-# samlock 数据库设计
+# kno 数据库设计
 
 ##  login.html
 
-- user.table 用户信息表
+user.table : the users' information table.
 
-  | 字段       | 描述   |
+  | Field    | Description |
   | -------- | ---- |
-  | username | 用户名  |
-  | passwd   | 密码   |
+  | username | username |
+  | passwd   | passwd   |
 
 ## status.shtml
 
-- lockrealfacus.table 用户关注的锁的状态信息
+lockrealstatus.table : the sensors' status infomation.
 
-- lockrealstatus.table 锁的状态信息（同facus.table字段）
-
-  | 字段           | 描述     |
-  | ------------ | ------ |
-  | sId          | 设备编号   |
-  | sBuilding    | 楼号     |
-  | sFloor       | 楼层号    |
-  | sPosition    | 方位号    |
-  | sRoom        | 房间号    |
-  | sOpen        | 开关     |
-  | sIP          | IP地址信息 |
-  | sDeviceModel | 传感器型号  |
+  | Field        | Description |
+  | ------------ | -------- |
+  | sroomId      | room id  |
+  | sPosition    | postion  |
+  | sOpen        | on, off or wrong |
+  | sIP          | ip       |
+  | sPort        | port     |
+  | sFacus       | facus    |
 
 ## analysis.shtml
 
-在lockrealstaus.table遍历数据
+Traverse Sensors' status data in lockrealstatus.table.
 
 ## configure.shtml
 
-- sensorDevice.table 传感器信息表，记录所有的传感器信息
+sensorDevice.table : the sensors' infomation lists.
 
-
-- facusDevice.table 用户关注的传感器信息
-
-| 字段          | 描述     |
-| ----------- | ------ |
-| sId         | 设备编号   |
-| sBuilding   | 楼号     |
-| sFloor      | 楼层号    |
-| sPosition   | 方位号    |
-| sRoom       | 房间号    |
-| sOpen       | 开关     |
-| sIP         | IP地址信息 |
-| sDeviceMode | 传感器型号  |
+  | Field        | Description |
+  | ------------ | -------- |
+  | sroomId      | room id  |
+  | sPosition    | postion  |
+  | sOpen        | on, off or wrong |
+  | sIP          | ip       |
+  | sPort        | port     |
+  | sFacus       | facus    |
 
 ## system.shtml
 
-- 【版本】version.table
+version.table : intro the version infomation.
 
-  | 字段                  | 描述        |
+  | Field        | Description |
   | ------------------- | --------- |
-  | pNewFunciton        | 本次更新的功能   |
-  | pVersionHistory     | 版本历史记录URL |
-  | pVersionCurrent     | 版本号（主键）   |
-  | pVersionReleaseTime | 版本发布时间    |
-  | pPublishCompany     | 开发商       |
-  | pSize               | 版本大小      |
-  | pCompatibility      | 兼容性       |
-  | pLanguage           | 语言        |
-  | pDeveloper          | 开发者网站     |
-  | pPrivacyPolicy      | 隐私政策      |
+  | pNewFunciton        | New Function         |
+  | pVersionHistory     | Version History URL  |
+  | pVersionCurrent     | Version Current      |
+  | pVersionReleaseTime | Version Release Time |
+  | pPublishCompany     | PublishCompany       |
+  | pSize               | Size of Software     |
+  | pCompatibility      | System Compatibility |
+  | pLanguage           | Languge           |
+  | pDeveloper          | Developer Website |
+  | pPrivacyPolicy      | Privacy Policy    |
 
-- 【升级】
+- 【UPDATE】
 
-- 【日志】
+- 【LOG】
 
-- 【帮助】
+- 【HELP】
 
 ## history.shtml
 
-| 字段           | 描述      |
-| ------------ | ------- |
-| hVersion     | 版本号（主键） |
-| hReleaseTime | 发行时间    |
-| hNewFunciton | 新功能     |
-
+  | Field        | Description |
+  | ------------ | ------- |
+  | hVersion     | Version |
+  | hReleaseTime | Release Time |
+  | hNewFunciton | New Funciton |

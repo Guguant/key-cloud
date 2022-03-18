@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
 
-#ifndef SAMLOCK_SENSOR_LOCKSTATUS_H_
-#define SAMLOCK_SENSOR_LOCKSTATUS_H_
+#ifndef KNO_SENSOR_LOCKSTATUS_H_
+#define KNO_SENSOR_LOCKSTATUS_H_
 
 /* 禁止使用拷贝构造函数和赋值操作的宏 */
 #define DISALLOW_COPY_AND_ASSIGN(TypeName) \
@@ -29,4 +29,4 @@ class SensorStatus
 };
 } // namespace sensorinfo
 
-#endif // SAMLOCK_SENSOR_LOCKSTATUS_H_
+#endif // KNO_SENSOR_LOCKSTATUS_H_

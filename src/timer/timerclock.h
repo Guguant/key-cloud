@@ -1,12 +1,12 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
- *
  * get format time through class timerclock.
  */
-#ifndef SAMLOCK_TIMER_TIMERCLOCK_H_
-#define SAMLOCK_TIMER_TIMERCLOCK_H_
+
+#ifndef KNO_TIMER_TIMERCLOCK_H_
+#define KNO_TIMER_TIMERCLOCK_H_
 
 #include <string>
 // 禁止使用拷贝构造函数和赋值操作的宏
@@ -14,7 +14,7 @@
     TypeName(const TypeName &);            \
     void operator=(const TypeName &)
 
-namespace samtimer
+namespace knotimer
 {
 struct StandardTime
 {
@@ -48,6 +48,6 @@ class Timer
   private:
     StandardTime current_time_;
 };
-} // namespace samtimer
+} // namespace knotimer
 
 #endif //

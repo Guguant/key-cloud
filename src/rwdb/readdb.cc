@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
@@ -12,26 +12,26 @@
 namespace rwdb
 {
 // 读取传感器状态信息
-//   select distinct sId, sBuilding, sFloor,sPosition,
-//                   sRoom, sOpen,sIP, sDeviceModel from lockrealstatus;
+//   select distinct sroomId, sPosition, sOpen, sIP,
+//                   sPort, sFacus from lockrealstatus;
 //
 void ReadDB::ReadRealStatusInfo(Json::Value &in)
 {
     sqlite3 *db;
     int rc;
-    rc = sqlite3_open("samlock.db", &db);
+    rc = sqlite3_open("kno.db", &db);
     if (rc != SQLITE_OK)
     {
-        printf("ERROR opening SQLite DB 'samlock.db': %s\n", sqlite3_errmsg(db));
+        printf("ERROR opening SQLite DB 'kno.db': %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         exit(0);
     }
 
     /*
-        * 从 lockrealstatus表中，获取传感器数据
-        */
+     * 从 lockrealstatus 表中，获取传感器数据
+     */
     sqlite3_stmt *stmt;
-    sqlite3_prepare_v2(db, "select distinct sroomId,sPosition, sOpen,sIP, sPort, sFacus from lockrealstatus order by sroomId ASC;",
+    sqlite3_prepare_v2(db, "select distinct sroomId, sPosition, sOpen, sIP, sPort, sFacus from lockrealstatus order by sroomId ASC;",
                        -1, &stmt, NULL);
 
     Json::Value single_sensor_status;
@@ -54,10 +54,10 @@ void ReadDB::ReadUserId(Json::Value &user_in)
 {
     sqlite3 *db;
     int rc;
-    rc = sqlite3_open("samlock.db", &db);
+    rc = sqlite3_open("kno.db", &db);
     if (rc != SQLITE_OK)
     {
-        printf("ERROR opening SQLite DB 'samlock.db': %s\n", sqlite3_errmsg(db));
+        printf("ERROR opening SQLite DB 'kno.db': %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         exit(0);
     }
@@ -77,25 +77,25 @@ void ReadDB::ReadUserId(Json::Value &user_in)
 } // ReadUserId()
 
 // 读取日志信息
-//   select distinct time,info from log 
+//   select distinct time, info from log 
 //
 void ReadDB::ReadLog(Json::Value &in)
 {
     sqlite3 *db;
     int rc;
-    rc = sqlite3_open("samlock.db", &db);
+    rc = sqlite3_open("kno.db", &db);
     if (rc != SQLITE_OK)
     {
-        printf("ERROR opening SQLite DB 'samlock.db': %s\n", sqlite3_errmsg(db));
+        printf("ERROR opening SQLite DB 'kno.db': %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         exit(0);
     }
 
     /*
-     * 从log表中，获取日志数据
+     * 从 log 表中，获取日志数据
      */
     sqlite3_stmt *stmt;
-    sqlite3_prepare_v2(db, "select distinct time,info from log order by time DESC;",
+    sqlite3_prepare_v2(db, "select distinct time, info from log order by time DESC;",
                        -1, &stmt, NULL);
 
     Json::Value single_sensor_status;

@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2017 - 2020.
- * License boilerplate. GNU General Public License v3.0
+ * Copyright (c) 2017 - 2022.
+ * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
 
-#ifndef SAMLOCK_RWDB_READDB_H_
-#define SAMLOCK_RWDB_READDB_H_
+#ifndef KNO_RWDB_READDB_H_
+#define KNO_RWDB_READDB_H_
 
 #include <json/json.h>
 
@@ -24,7 +24,7 @@ class ReadDB
 
     //【REAL STATUS】
     // This function is to read all sensors' real status
-    // from lockrealstatus.table in samlock.db.
+    // from lockrealstatus.table in kno.db.
     // input: json
     // output:json using &
     void ReadRealStatusInfo(Json::Value & in);
@@ -40,4 +40,4 @@ class ReadDB
     DISALLOW_COPY_AND_ASSIGN(ReadDB);
 }; // class ReadDB
 }// namesapce rwdb
-#endif // SAMLOCK_RWDB_READDB_H_
+#endif // KNO_RWDB_READDB_H_

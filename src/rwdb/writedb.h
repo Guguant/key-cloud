@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
 
-#ifndef SAMLOCK_RWDB_WRITEDB_H_
-#define SAMLOCK_RWDB_WRITEDB_H_
+#ifndef KNO_RWDB_WRITEDB_H_
+#define KNO_RWDB_WRITEDB_H_
 
 #include "../mydata.h"
 #include <json/json.h>
@@ -32,4 +32,4 @@ class WriteDB
     DISALLOW_COPY_AND_ASSIGN(WriteDB);
 }; // class WriteDB
 }// namesapce rwdb
-#endif // SAMLOCK_RWDB_WRITEDB_H_
+#endif // KNO_RWDB_WRITEDB_H_

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-namespace samtimer
+namespace knotimer
 {
     // transform standard time to string format's time.
     string Timer::GetStringTime(string &st)
@@ -27,7 +27,7 @@ namespace samtimer
         st = tmp_time;
         return tmp_time;
     }
-    
+
     // call time API to catch standard time.
     void Timer::set_current_time()
     {
@@ -47,4 +47,4 @@ namespace samtimer
         return current_time_;
     }
 
-} // namespace samtimer
+} // namespace knotimer

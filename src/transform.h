@@ -1,13 +1,11 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  */
 
-// 格式转换类
-
-#ifndef SAMLOCK_TRANSFORM_H_
-#define SAMLOCK_TRANSFORM_H_
+#ifndef KNO_TRANSFORM_H_
+#define KNO_TRANSFORM_H_
 
 #include <json/json.h>
 #include <string>

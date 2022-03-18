@@ -9,11 +9,10 @@ AUX_SOURCE_DIRECTORY(./ MAIN)
 
 # output path for binary file
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-ADD_EXECUTABLE(sam server.cc ${TIMER} ${RWDB} ${MAIN})
-TARGET_LINK_LIBRARIES(sam sqlite3
+ADD_EXECUTABLE(kno server.cc ${TIMER} ${RWDB} ${MAIN})
+TARGET_LINK_LIBRARIES(kno sqlite3
                           ${PROJECT_SOURCE_DIR}/lib/libmongoose.a
-                          ${PROJECT_SOURCE_DIR}/lib/libjsoncpp.a
-                          )
+                          ${PROJECT_SOURCE_DIR}/lib/libjsoncpp.a)
 
 ADD_SUBDIRECTORY(timer)
 ADD_SUBDIRECTORY(sensor)

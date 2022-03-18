@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 - 2020.
+ * Copyright (c) 2017 - 2022.
  * GNU General Public License v3.0
  * Sun Yiming <zscandyz[at]gmail[dot]com>
  * Description: Class Timer used to test.
@@ -10,12 +10,12 @@
 
 int main(void)
 {
-    samtimer::Timer Now;
+    knotimer::Timer Now;
     std::string st;
 
     Now.set_current_time();
     Now.GetStringTime(st);
-    
+
     printf("%s\n", st.c_str());
     return 0;
 }
