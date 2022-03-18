@@ -1,6 +1,6 @@
-# Key Cloud
+# Kno
 
-**Key Cloud** is a smart doors' lock management cloud platform.
+Kno is a smart doors' lock management cloud platform.
 
 * [Download Key Cloud source code here](https://github.com/estrm/key-cloud)
 
