@@ -8,22 +8,37 @@ Kno is a smart doors' lock management cloud platform.
 
 * tiny and super quick
 
-## Build
+## Build and Run
 
-Build with **CMake**.
+1. Build static libraries
+
+Use the tool `generate_libs.sh` to build mongoose and jsoncpp source code. It will generate libmongoose.a and libjsoncpp.a in directory lib, if they do not exist.
+
+Usage:
+
+```shell
+sh generate_libs.sh
+```
+
+2. Build the target kno
 
 ```c
 mkdir build
 cd build
 
 cmake ..
-make -j8
+make
+```
 
-cd ../bin/
+3. Run
+
+Back to root dir and `cd bin`. Run the kno.
+
+```c
 ./kno
 ```
 
-visit the IP: [http://localhost:8888](http://localhost:8888) (or other ports defined by variable **s_http_port** in **server.cc** file)
+Visit the IP: [http://localhost:8888](http://localhost:8888) (or other ports defined by variable **s_http_port** in **server.cc** file)
 
 ## Display
 
@@ -56,9 +71,10 @@ mkdir build
 cd build
 
 cmake ..
-make -j8
+make
 ```
 
 ## Contributors
 
 * [estrm](https://github.com/estrm)
+
