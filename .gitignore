@@ -2,6 +2,6 @@
 build/
 bin/kno
 bin/*test
-lib/
+lib/lib*.a
 thirdparty/mongoose/libmongoose.a
 thirdparty/mongoose/mongoose.o

@@ -1,0 +1,6 @@
+The project kno depends on static libraries to finish build.
+
+Static libraries:
+    1. libmongoose.a
+    2. libjsoncpp.a
+
